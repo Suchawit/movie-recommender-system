@@ -3,6 +3,7 @@ from fastapi import FastAPI, Response, File, UploadFile, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import process
+
 # Press ⌃F5 to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
@@ -31,6 +32,7 @@ def health_check():
 async def read_item(user_id: int, returnMetadata: bool = False):
     result = process.run_process(user_id, returnMetadata=returnMetadata)
     return JSONResponse(result, status_code=200)
+
 
 if __name__ == "__main__":
     import uvicorn
