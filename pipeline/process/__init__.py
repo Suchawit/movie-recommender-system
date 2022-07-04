@@ -14,9 +14,9 @@ def get_top_score(recommendation_indices, predict_output, top_value=3):
         for v in sorted_prediction[-top_value:]
     ]
     # get movie_id from those indices
-    top_3_movie_id = movies["movieId"].iloc[top_3_movie_id_indices].tolist()
+    top_movie_id = movies["movieId"].iloc[top_3_movie_id_indices].tolist()
 
-    return top_3_movie_id
+    return top_movie_id
 
 
 def movie_metadata(movie_id):
@@ -34,10 +34,10 @@ def run_process(user_id, returnMetadata=False):
     predict_output = collaborative_filtering_predict(user_id, recommendation_indices)
 
     # get top 3 predicted result
-    top_3_movie_id = get_top_score(recommendation_indices, predict_output)
+    top_movie_id = get_top_score(recommendation_indices, predict_output)
 
     if returnMetadata:
-        output = {"item": [movie_metadata(movie_id) for movie_id in top_3_movie_id]}
+        output = {"item": [movie_metadata(movie_id) for movie_id in top_movie_id]}
     else:
-        output = {"item": [{"id": movie_id} for movie_id in top_3_movie_id]}
+        output = {"item": [{"id": movie_id} for movie_id in top_movie_id]}
     return output
