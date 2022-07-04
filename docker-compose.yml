@@ -1,0 +1,26 @@
+version: "2.3"
+services:
+  movie_recommendation_image:
+    build:
+      context: pipeline/
+    restart: always
+    ports:
+      - 3500:3000
+    environment:
+      - URL=tensorflow-model-serving
+      - PORT=8500
+      - MODEL_NAME=movie_recommendation_model
+# tensorflow-model-serving run on base repository
+  tensorflow-model-serving:
+    build:
+      context: tensorflow-model-serving
+    restart: always
+    command:
+      [
+        "--model_config_file=/models/models.config",
+      ]
+    #runtime: nvidia
+networks:
+  default:
+    external:
+      name: movie-recommendation-system
