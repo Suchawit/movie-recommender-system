@@ -5,16 +5,17 @@ import pandas as pd
 
 PATH = "./data/"
 movies = pd.read_csv(PATH + "movies.csv")
+ratings = pd.read_csv(PATH + "ratings.csv")
 
 
 def get_top_score(recommendation_indices, predict_output, top_value=3):
     sorted_prediction = sorted(list(predict_output))
-    top_3_movie_id_indices = [
+    top_movie_id_indices = [
         recommendation_indices[list(predict_output).index(v)]
         for v in sorted_prediction[-top_value:]
     ]
     # get movie_id from those indices
-    top_movie_id = movies["movieId"].iloc[top_3_movie_id_indices].tolist()
+    top_movie_id = movies["movieId"].iloc[top_movie_id_indices].tolist()
 
     return top_movie_id
 
@@ -40,4 +41,11 @@ def run_process(user_id, returnMetadata=False):
         output = {"item": [movie_metadata(movie_id) for movie_id in top_movie_id]}
     else:
         output = {"item": [{"id": movie_id} for movie_id in top_movie_id]}
+    return output
+
+
+def run_feature(user_id):
+    history_indices = ratings[ratings.userId == user_id].index.tolist()
+    history_score = ratings["movieId"].iloc[history_indices].tolist()
+    output = {"feature": [{"history": history_score}]}
     return output
