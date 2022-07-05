@@ -5,7 +5,11 @@ a recommender system based on users' behaviors to recommend the content.
 
 This project is based on [**Dataset**](https://github.com/lukkiddd-tdg/movielens-small) which applies techniques **collaborative filtering** keras model to predict potential rate from input user recommended movie from output of **content based (cosine similarity) filtering**
 
-## How it works and input & output
+## How it works
+
+<img src="https://github.com/Suchawit/movie-recommender-system/blob/main/images/Screen%20Shot%202565-07-05%20at%2015.30.32.png" width="1000px"/>
+
+## Input & Output
 
 1. Path (Get): /recommendation, Query Parameter: ?user_id=user_id
 
