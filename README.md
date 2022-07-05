@@ -3,7 +3,7 @@
 **Objective**:
 a recommender system based on users' behaviors to recommend the content.
 
-This project is based on [**Dataset**](https://github.com/lukkiddd-tdg/movielens-small) which applies techniques **collaborative and content based filtering**
+This project is based on [**Dataset**](https://github.com/lukkiddd-tdg/movielens-small) which applies techniques **collaborative filtering (keras model to predict potential that user will rate recommended content based on content based (cosine similarity) filtering**
 
 ## How it works and input & output
 
