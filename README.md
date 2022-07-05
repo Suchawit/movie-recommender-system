@@ -23,4 +23,4 @@ This project is based on [**Dataset**](https://github.com/lukkiddd-tdg/movielens
 <img src="https://github.com/Suchawit/movie-recommender-system/blob/main/images/Screen%20Shot%202565-07-05%20at%2010.50.25.png" width="1000px"/>
 
 ## How to improve in the future
-ฉollect date and time data that user watched the movie, and apply that data for probably 5 recent watched movies to be calculated and get recommendatation. Get IMDB score and how many people rated for each movie to be applied for improving recommenation system based on more population. Get top 10 of the watched movies in past week which might be viral, new and fun to watch
+Collect date and time data that user watched the movie, and apply that data for probably 5 recent watched movies to be calculated and get recommendatation. Get IMDB score and how many people rated for each movie to be applied for improving recommenation system based on more population. Get top 10 of the watched movies in past week which might be viral, new and fun to watch
