@@ -8,4 +8,5 @@ This project is based on [**Dataset**](https://github.com/lukkiddd-tdg/movielens
 ## How it works
 
 Path (Get): /recommendation, Query Parameter: ?user_id=user_id
-Example
+
+***Example***
