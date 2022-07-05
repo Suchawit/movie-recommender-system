@@ -7,7 +7,7 @@ This project is based on [**Dataset**](https://github.com/lukkiddd-tdg/movielens
 
 ## How it works
 
-<img src="https://github.com/Suchawit/movie-recommender-system/blob/main/images/Screen%20Shot%202565-07-05%20at%2015.30.32.png" width="1000px"/>
+<img src="https://github.com/Suchawit/movie-recommender-system/blob/main/images/Screen%20Shot%202565-07-05%20at%2015.35.04.png" width="1000px"/>
 
 ## Input & Output
 
