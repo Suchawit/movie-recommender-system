@@ -34,7 +34,7 @@ async def read_item(user_id: int, returnMetadata: bool = False):
     return JSONResponse(result, status_code=200)
 
 
-@app.get("/recommendation/feature/")
+@app.get("/feature/")
 async def read_item(user_id: int):
     result = process.run_feature(user_id)
     return JSONResponse(result, status_code=200)
