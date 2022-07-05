@@ -67,7 +67,7 @@ def run_content_based_recommendation(user_id):
 
     # get percentile 60 of score and drop it
     score_list = ratings["rating"].iloc[history_indices].tolist()
-    percent_60 = np.percentile(score_list, q=50)
+    percent_60 = np.percentile(score_list, q=60)
     drop_list = ratings[ratings.rating <= percent_60].index.tolist()
     history_indices = list(set(history_indices) - set(drop_list))
 
